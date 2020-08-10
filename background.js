@@ -8,6 +8,7 @@ const sendToOpenOversight = (id, imageUrl) => {
     });
 
     const image = new Image();
+    image.crossOrigin = "anonymous";
     image.src = imageUrl;
     image.onload = () => {
       canvas.width = image.width;
