@@ -1,0 +1,22 @@
+{
+  "name": "OpenOversight Plugin",
+  "version": "1.0",
+  "description": "This plugin makes it easy to share an image directly to OpenOversight",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["activeTab", "contextMenus"]
+}
